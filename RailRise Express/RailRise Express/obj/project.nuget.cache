@@ -1,10 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "EfMGEnU+9erBu/XJt7FxbV3dHj4A1MDOxGQiEGD+C9tGDkZA7DZogojRWNkiKypT8DzKMCscBn6eG2qjzGf+UQ==",
+  "dgSpecHash": "lekk46YEtHUsYBcqBSAydCga48pNbVyW0tNlftTDxEH9IR7AqpQJwen1eTYsmqONNgYxAZg6YIRA1Z52H0Zikw==",
   "success": true,
   "projectFilePath": "C:\\ISKOLA\\Gyuris\\RailRise_Express\\RailRise Express\\RailRise Express\\RailRise Express.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mulat\\.nuget\\packages\\cef.redist.x64\\116.0.23\\cef.redist.x64.116.0.23.nupkg.sha512",
+    "C:\\Users\\mulat\\.nuget\\packages\\cef.redist.x86\\116.0.23\\cef.redist.x86.116.0.23.nupkg.sha512",
+    "C:\\Users\\mulat\\.nuget\\packages\\cefsharp.common\\116.0.230\\cefsharp.common.116.0.230.nupkg.sha512",
+    "C:\\Users\\mulat\\.nuget\\packages\\cefsharp.wpf\\116.0.230\\cefsharp.wpf.116.0.230.nupkg.sha512",
     "C:\\Users\\mulat\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'CefSharp.Wpf 116.0.230' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "CefSharp.Wpf",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

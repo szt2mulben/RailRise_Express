@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RailRise_Express"
         xmlns:Viewmodel1="clr-namespace:RailRise_Express.ViewModels"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d"
         Title="RailRise Express" Height="450" Width="800">
     <Window.DataContext>
@@ -32,13 +33,13 @@
         <Label Grid.Row="2" Grid.Column="0">Célállomás:</Label>
         <Label Grid.Row="3" Grid.Column="0" Margin="2,2,3,6">Indulási idő</Label>
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Margin="2,39,77,240" Grid.RowSpan="6">
-            <RadioButton GroupName="schoolclass" Margin="2 4 2 2">Legrövidebb útvonal</RadioButton>
-            <RadioButton GroupName="schoolclass" Margin="2 4 2 2">Legolcsóbb út</RadioButton>
-            <RadioButton GroupName="schoolclass" Margin="2 4 2 2">Csoportos utazás</RadioButton>
+            <RadioButton GroupName="rclass" Margin="2 4 2 2">Legrövidebb útvonal</RadioButton>
+            <RadioButton GroupName="rclass" Margin="2 4 2 2">Legolcsóbb út</RadioButton>
+            <RadioButton GroupName="rclass" Margin="2 4 2 2">Csoportos utazás</RadioButton>
         </StackPanel>
 
         <Grid>
-            <WebView Name="MapWebView" Source="{Binding MapUrl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <cefSharp:ChromiumWebBrowser Name="MapBrowser" Address="https://www.google.com/maps" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </Grid>
 
         <Button Grid.Row="2" Margin="0,0,-205,10" HorizontalAlignment="Right" MinWidth="80" Grid.Column="1" Command="{Binding SearchCommand}" Width="101">Keresés</Button>

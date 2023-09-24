@@ -22,3 +22,4 @@ C:\ISKOLA\Gyuris\RailRise_Express\RailRise Express\RailRise Express\obj\Debug\ne
 C:\ISKOLA\Gyuris\RailRise_Express\RailRise Express\RailRise Express\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll
 C:\ISKOLA\Gyuris\RailRise_Express\RailRise Express\RailRise Express\obj\Debug\net6.0-windows\RailRise Express.csproj.CopyComplete
 C:\ISKOLA\Gyuris\RailRise_Express\RailRise Express\RailRise Express\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\ISKOLA\Gyuris\RailRise_Express\RailRise Express\RailRise Express\obj\Debug\net6.0-windows\RailRise Express_Content.g.cs
