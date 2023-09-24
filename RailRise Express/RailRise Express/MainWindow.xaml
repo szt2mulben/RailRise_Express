@@ -30,17 +30,18 @@
         <Label Grid.Row="0" HorizontalAlignment="Center" Grid.Column="1" Margin="0,-3,0,3">Útvonalkereső</Label>
         <Label Grid.Row="1" Grid.Column="0">Indulási hely:</Label>
         <Label Grid.Row="2" Grid.Column="0">Célállomás:</Label>
-        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="2,2,298,32" Grid.RowSpan="5">Indulási idő</Label>
-        <Button Grid.Row="7" Margin="0,10,150,2" HorizontalAlignment="Right" MinWidth="80" Grid.Column="1" Command="{Binding SearchCommand}">Keresés</Button>
+        <Label Grid.Row="3" Grid.Column="0" Margin="2,2,3,6">Indulási idő</Label>
+        <Button Grid.Row="2" Margin="0,0,-205,10" HorizontalAlignment="Right" MinWidth="80" Grid.Column="1" Command="{Binding SearchCommand}" Width="101">Keresés</Button>
+        <Button Grid.Row="2" Margin="0,0,-340,10" HorizontalAlignment="Right" MinWidth="80" Grid.Column="1" Width="101">Törlés</Button>
         <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding StartLocatione}"></TextBox>
         <TextBox Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding EndLocation}"></TextBox>
         <DatePicker Grid.Row="3" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding DepartureDate}"></DatePicker>
 
-        <GroupBox Grid.Row="8" Grid.ColumnSpan="2">
-            <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Margin="2 10 2 2">
+        <GroupBox Grid.Row="8" Grid.Column="1" Margin="387,10,-380,30">
+            <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Margin="0,0,11,0" Height="261">
                 <StackPanel Orientation="Horizontal">
                     <Label>Eredmény:</Label>
-                    <Label Content="{Binding RouteResults}"></Label>
+                    <Label Content="{Binding RouteResults}" Width="204" Height="69"></Label>
                 </StackPanel>
             </StackPanel>
         </GroupBox>
