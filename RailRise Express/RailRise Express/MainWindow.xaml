@@ -26,29 +26,30 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="199*"></RowDefinition>
+            <RowDefinition Height="97*"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" HorizontalAlignment="Center" Grid.Column="1" Margin="0,-3,0,3">Útvonalkereső</Label>
-        <Label Grid.Row="1" Grid.Column="0">Indulási hely:</Label>
-        <Label Grid.Row="2" Grid.Column="0">Célállomás:</Label>
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,300,30" Grid.RowSpan="2">Indulási hely:</Label>
+        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,300,34" Grid.RowSpan="2">Célállomás:</Label>
         <Label Grid.Row="3" Grid.Column="0" Margin="2,2,3,6">Indulási idő</Label>
-        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Margin="2,39,77,240" Grid.RowSpan="6">
+        <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Margin="2,5,77,143">
             <RadioButton GroupName="rclass" Margin="2 4 2 2">Legrövidebb útvonal</RadioButton>
             <RadioButton GroupName="rclass" Margin="2 4 2 2">Legolcsóbb út</RadioButton>
             <RadioButton GroupName="rclass" Margin="2 4 2 2">Csoportos utazás</RadioButton>
         </StackPanel>
 
-        <Grid>
+        <Grid Margin="61,96,2,10" Grid.Row="8" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <cefSharp:ChromiumWebBrowser Name="MapBrowser" Address="https://www.google.com/maps" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </Grid>
 
         <Button Grid.Row="2" Margin="0,0,-205,10" HorizontalAlignment="Right" MinWidth="80" Grid.Column="1" Command="{Binding SearchCommand}" Width="101">Keresés</Button>
         <Button Grid.Row="2" Margin="0,0,-340,10" HorizontalAlignment="Right" MinWidth="80" Grid.Column="1" Width="101" Command="{Binding DoRemove}">Törlés</Button>
-        <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding StartLocatione}"></TextBox>
-        <TextBox Grid.Row="2" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding EndLocation}"></TextBox>
-        <DatePicker Grid.Row="3" Grid.Column="1" Margin="2 2 2 2" SelectedDate="{Binding DepartureDate}"></DatePicker>
+        <TextBox Grid.Row="1" Grid.Column="1" Margin="2,2,2,2" Padding="0 2" Text="{Binding StartLocatione}"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Margin="2,2,2,2" Padding="0 2" Text="{Binding EndLocation}"></TextBox>
+        <DatePicker Grid.Row="3" Grid.Column="1" Margin="2,2,2,2" SelectedDate="{Binding DepartureDate}"></DatePicker>
 
-        <GroupBox Grid.Row="8" Grid.Column="1" Margin="387,10,-380,30">
+        <GroupBox Grid.Row="8" Grid.Column="1" Margin="387,10,-380,30" Grid.RowSpan="2">
             <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Margin="0,0,11,0" Height="261">
                 <StackPanel Orientation="Horizontal">
                     <Label>Eredmény:</Label>
