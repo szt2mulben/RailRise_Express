@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5p15fPMxr9czIYHGhJZQboPeKlPl/EBkilYpKsfisL3BnTODZemxxOlQlMB8mEiPQ3sT9iD7uG9Jwuz56GVJKA==",
+  "dgSpecHash": "EfMGEnU+9erBu/XJt7FxbV3dHj4A1MDOxGQiEGD+C9tGDkZA7DZogojRWNkiKypT8DzKMCscBn6eG2qjzGf+UQ==",
   "success": true,
   "projectFilePath": "C:\\ISKOLA\\Gyuris\\RailRise_Express\\RailRise Express\\RailRise Express\\RailRise Express.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mulat\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512"
+  ],
   "logs": []
 }
