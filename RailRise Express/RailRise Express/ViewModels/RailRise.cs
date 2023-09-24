@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using RailRise_Express.Model;
+using System.DirectoryServices;
 
 namespace RailRise_Express.ViewModels
 {
@@ -45,16 +47,23 @@ namespace RailRise_Express.ViewModels
             }
         }
 
+        public ICommand Delete { get; }
         public ICommand SearchCommand { get; }
 
         public RailRise()
         {
             SearchCommand = new RelayCommand(SearchRoute);
+            Delete = new RelayCommand(DoRemove);
+        }
+
+        private void DoRemove()
+        {
+            throw new NotImplementedException();
         }
 
         private void SearchRoute()
         {
-            
+            //Itt fog menni a keresés, csak nincs még semmi olyan, amivel tudnánk keresni.
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
