@@ -36,6 +36,11 @@
             <RadioButton GroupName="schoolclass" Margin="2 4 2 2">Legolcsóbb út</RadioButton>
             <RadioButton GroupName="schoolclass" Margin="2 4 2 2">Csoportos utazás</RadioButton>
         </StackPanel>
+
+        <Grid>
+            <WebView Name="MapWebView" Source="{Binding MapUrl}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
+
         <Button Grid.Row="2" Margin="0,0,-205,10" HorizontalAlignment="Right" MinWidth="80" Grid.Column="1" Command="{Binding SearchCommand}" Width="101">Keresés</Button>
         <Button Grid.Row="2" Margin="0,0,-340,10" HorizontalAlignment="Right" MinWidth="80" Grid.Column="1" Width="101" Command="{Binding DoRemove}">Törlés</Button>
         <TextBox Grid.Row="1" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding StartLocatione}"></TextBox>
