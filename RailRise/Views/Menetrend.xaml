@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="RailRise.Views.Menetrend"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RailRise.Views" 
+             xmlns:viewmodel="clr-namespace:RailRise.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" Height="514">
+    <UserControl.DataContext>
+        <viewmodel:MenetrendViewModel />
+    </UserControl.DataContext>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="355,4,0,5" Background="White" HorizontalContentAlignment="Center" FontSize="15px">Jegyinformáció</Label>
+
+        <Grid Grid.ColumnSpan="2" Margin="10,10,7,61" Grid.Row="5" Background="LightGray">
+            <Label HorizontalContentAlignment="Left" Margin="22,0,243,365" FontSize="20px">Bérlet</Label>
+            <Border Margin="22,44,98,152" Background="#ECECEC" BorderBrush="#007ACC" BorderThickness="1" Padding="5">
+                <StackPanel>
+                    <TextBlock Text="Honnan:"/>
+                    <TextBlock Text="{Binding SelectedStudent.Honnan}" Margin="0,5,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <Border Margin="22,92,98,142" Background="#ECECEC" BorderBrush="#007ACC" BorderThickness="1" Padding="5">
+                <StackPanel>
+                    <TextBlock Text="Hova:" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.037"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                    <TextBlock Text="{Binding SelectedStudent.Hova}" Margin="0,5,0,0"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+
+        <Border Grid.Row="5" Grid.Column="1" Margin="31,152,105,211" Background="#ECECEC" BorderBrush="#007ACC" BorderThickness="1" Padding="5">
+            <StackPanel>
+                <TextBlock Text="Érvényesség(Napban megadva):"/>
+                <TextBlock Text="{Binding SelectedStudent.ervenyes}" Margin="0,5,0,0"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="1" Margin="31,204,105,159" Background="#ECECEC" BorderBrush="#007ACC" BorderThickness="1" Padding="5">
+            <StackPanel>
+                <TextBlock Text="Kocsiosztály:"/>
+                <TextBlock Text="{Binding SelectedStudent.kocsiosztaly}" Margin="0,5,0,0"></TextBlock>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="1" Margin="31,256,105,87" Background="#ECECEC" BorderBrush="#007ACC" BorderThickness="1" Padding="5">
+            <StackPanel>
+                <TextBlock Text="Érvényes(dátum -tól, -ig):"/>
+                <TextBlock Text="{Binding SelectedStudent.tol}" Width="321"/>
+                <TextBlock Text="{Binding SelectedStudent.ig}" Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="5" Grid.Column="1" Margin="31,328,105,87" Background="#ECECEC" BorderBrush="#007ACC" BorderThickness="1" Padding="5">
+            <StackPanel Margin="0,0,0,4">
+                <TextBlock Text="Ár:"/>
+                <TextBlock Text="{Binding SelectedStudent.ar}" Margin="0,5,0,0"></TextBlock>
+            </StackPanel>
+        </Border>
+
+        <Image Source="../Resources/Images/qrkod.png" Grid.Column="1" Margin="458,3,-335,296" Grid.Row="5" />
+        <TextBlock Text="Azonosító: 1001003110" Grid.ColumnSpan="2" Height="16" Margin="566,205,-230,0" VerticalAlignment="Top" Grid.Row="5" RenderTransformOrigin="0.512,-0.841"/>
+        <Image Source="../Resources/Images/profil.png" Grid.Column="1" Margin="541,234,-252,57" Grid.Row="5" />
+
+    </Grid>
+</UserControl>
